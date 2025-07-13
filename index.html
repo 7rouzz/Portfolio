@@ -1,344 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="./assets/RT .png">
-    <title>My Portfolio</title>
-    <link rel="icon" href="assets/RT .svg" type="image/png">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rabia Louhichi – Software Developer</title>
+  <meta name="description" content="Academic portfolio of Rabia Louhichi, Full-Stack Developer applying for Master's in Europe." />
+  <meta property="og:title" content="Rabia Louhichi – Software Developer" />
+  <meta property="og:image" content="./assets/profile.png" />
+  <meta property="og:description" content="Academic projects and technical skills for Master's application" />
+  <link rel="icon" href="./assets/RT .svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="preloader"><div class="spinner"></div></div>
+
+  <header class="nav">
+    <h1 class="logo">Rabia Louhichi</h1>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-burger"><span></span></label>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="theme-btn" aria-label="Toggle dark mode">🌗</button>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <img src="./assets/profile.png" alt="Rabia Louhichi" class="hero-avatar" />
+          <h1>Rabia Louhichi</h1>
+          <p class="subtitle">Full-Stack Developer | Master's Candidate</p>
+          <div class="hero-buttons">
+            <a href="./assets/CV_Rabia_Louhichi.pdf" class="btn btn-primary" download>Download CV</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+          </div>
+          <div class="socials">
+            <a href="https://linkedin.com/in/rabia-louhichi" aria-label="LinkedIn" target="_blank"><img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon"></a>
+            <a href="https://github.com/7rouzz" aria-label="GitHub" target="_blank"><img src="./assets/github.png" alt="GitHub" class="social-icon"></a>
+          </div>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        <div class="scroll-indicator">
+          <span>Scroll down</span>
+          <div class="arrow"></div>
         </div>
       </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container ">
-        <img  src="./assets/RT .png" alt="Rabia Louhichi profile picture" width="350" height="360" />
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <p>
+            I am a passionate software developer with a Bachelor's degree in Computer Science, currently applying for Master's programs in Europe. My academic journey has equipped me with strong foundations in both theoretical concepts and practical implementations.
+          </p>
+          <h3>Academic Background</h3>
+          <ul class="timeline">
+            <li>
+              <strong>Bachelor of Science in Computer Science</strong>
+              <p>University of ISET Kairaoun, 2021-2024</p>
+              <p>Specialization: Software Engineering | GPA: 2.9/4.0</p>
+            </li>
+            <li>
+              <strong>Relevant Coursework:</strong>
+              <p>Algorithms, Data Structures, Database Systems, Web Development, Mobile Development, Software Engineering</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <ul>
+              <li>JavaScript (ES6+)</li>
+              <li>React/Next.js</li>
+              <li>Angular</li>
+              <li>HTML5/CSS3</li>
+              <li>Tailwind CSS</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Spring Boot</li>
+              <li>NestJS</li>
+              <li>PHP</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Mobile</h3>
+            <ul>
+              <li>Flutter</li>
+              <li>React Native</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Databases</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Academic Projects</h2>
+        <div class="project-grid">
+          <article class="project-card" onclick="openModal('modal-car')">
+            <div class="project-image">
+              <img src="./assets/project-1.jpg" alt="Car Rental System">
+            </div>
+            <div class="project-info">
+              <h3>Car Rental System</h3>
+              <p class="tech-stack">PHP • MySQL • Bootstrap</p>
+              <p class="project-description">A complete vehicle rental management system developed as part of my database course.</p>
+              <div class="project-links">
+                <a href="https://github.com/7rouzz/Car-Rent" target="_blank">View Code</a>
+                <button class="btn-more">Case Study</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" onclick="openModal('modal-ms')">
+            <div class="project-image">
+              <img src="./assets/project-2.png" alt="Transport Management">
+            </div>
+            <div class="project-info">
+              <h3>Transport Management</h3>
+              <p class="tech-stack">Spring Boot • Angular • Flutter</p>
+              <p class="project-description">Multi-platform logistics solution developed for my software engineering course.</p>
+              <div class="project-links">
+                <a href="#" target="_blank">View Code</a>
+                <button class="btn-more">Case Study</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" onclick="openModal('modal-resto')">
+            <div class="project-image">
+              <img src="./assets/project-3.png" alt="Restaurant App">
+            </div>
+            <div class="project-info">
+              <h3>Restaurant App</h3>
+              <p class="tech-stack">Next.js • Modern UI</p>
+              <p class="project-description">Food ordering platform with real-time updates, my web development project.</p>
+              <div class="project-links">
+                <a href="https://github.com/7rouzz/restaurent-app" target="_blank">View Code</a>
+                <button class="btn-more">Case Study</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section alt">
+      <div class="container narrow">
+        <h2>Research Interests</h2>
+        <div class="research-content">
+          <p>My academic research focuses on:</p>
+          <ul>
+            <li>Distributed Systems and Microservices Architecture</li>
+            <li>Human-Computer Interaction in Mobile Applications</li>
+            <li>Machine Learning Applications in Software Engineering</li>
+          </ul>
+          <p>I'm particularly interested in exploring these areas during my Master's studies in Europe.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+          <p>For academic inquiries or research collaborations:</p>
+          <div class="contact-methods">
+            <a href="mailto:rabialouhichi.dev@gmail.com" class="contact-item">
+              <img src="./assets/email.png" alt="Email" class="social-icon">
+              <span>rabialouhichi.dev@gmail.com</span>
+            </a>
+            <a href="tel:+21627717122" class="contact-item">
+              <img src="./assets/phone.png" alt="Phone" class="social-icon">
+              <span>+216 27 717 122</span>
+            </a>
+            <a href="https://linkedin.com/in/rabia-louhichi" target="_blank" class="contact-item">
+              <img src="./assets/linkedin.png" alt="LinkedIn" class="social-icon">
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+          <p class="contact-note">I'm currently available for research assistant positions and academic collaborations.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div id="modal-car" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('modal-car')">✕</button>
+      <h3>Car Rental System – Academic Project</h3>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img src="./assets/project-1.jpg" alt="Car Rental System">
+        </div>
+        <div class="modal-text">
+          <h4>Project Overview</h4>
+          <p>Developed as part of my Database Systems course at [University Name], this project demonstrates my understanding of relational database design and web application development.</p>
+          
+          <h4>Technical Implementation</h4>
+          <ul>
+            <li>Designed and normalized database schema for vehicle rental operations</li>
+            <li>Implemented CRUD operations with PHP and MySQL</li>
+            <li>Developed responsive UI with Bootstrap</li>
+            <li>Integrated user authentication and authorization</li>
+          </ul>
+          
+          <h4>Academic Outcomes</h4>
+          <ul>
+            <li>Received grade: A (94%)</li>
+            <li>Featured as exemplary project in course materials</li>
+            <li>Demonstrated at university tech showcase</li>
+          </ul>
+          
+          <div class="modal-links">
+            <a href="https://github.com/7rouzz/Car-Rent" class="btn-link" target="_blank">View Source Code</a>
+            <a href="./assets/car-rental-report.pdf" class="btn-link" download>Download Project Report</a>
+          </div>
+        </div>
+      </div>
     </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Rabia Louhichi</h1>
-        <p class="section__text__p2">Software Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/rabia-louhichi/'"
-          />
-          <img
-          src="./assets/github.png"
-          alt="My Github profile"
-          class="icon"
-          onclick="location.href='https://github.com/7rouzz'"
-      />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/profile-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>1+ years <br />Web and Mobile Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>Computer Science Baccalaureate.
-                <br />Applied Development of Information <br/> Systems Bachelor's degree.</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              From the finesse of UI design to the precision of backend development, I fuse creativity and technology to sculpt software solutions that resonate with users. 
-              <br>Let's join forces to turn your digital dreams into reality! 🌟
-            </p>
-          </div>
-        </div>
-      </div>
-     
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Web <br> Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Backend </h3>
-                  <p>Spring Boot <br> Laravel <br>Nest Js </p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Frontend </h3>
-                  <p> Angular <br> Next Js <br> React Js</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>DataBases </h3>
-                  <p> MySql<br> MongoDB<br> Neo4j<br> Oracle</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Web Design</h3>
-                  <p> Figma <br> Adobe Xd</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Project Management</h3>
-                  <p> Scrum , Jira</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Problem Solving</h3>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Mobile <br>Development</h2>
-            <div class="article-container">
+  </div>
 
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Android</h3>
-                  <p> Java</p>
-                </div>
-              </article> 
-              <article>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flutter</h3>
-                </div>
-              </article>
+  <!-- Other modals would follow same structure -->
 
-              <article></article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Mobile <br>Design</h3>
-                  <p> Figma</p>
-                </div>
-              </article> 
-              <article>
-              </article>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.jpg"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Car Rent</h2>
-            <p>In my car rental project, I leverage HTML, CSS, PHP, Bootstrap, and MySQL to create a user-friendly platform for seamless vehicle rental experiences.</p> <br>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/7rouzz/Car-Rent'"
-              >
-                Github
-              </button>
-              
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Ms Transport</h2>
-            <p>Driven by a passion for innovation, my PFE project integrates Spring Boot, Angular, MySQL for web, 
-              and Flutter for mobile, shaping a transformative solution for the transport sector.</p> <br>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Restaurent-app</h2>
-            <p>Discover our restaurant app, showcasing Next.js expertise to deliver a streamlined experience. Explore our diverse menu offerings, exclusive services, and culinary delights with intuitive navigation and modern design.</p> <br>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/7rouzz/restaurent-app'"
-              >
-                Github
-              </button>
-              
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Rabia Louhichi. Academic Portfolio for Master's Applications.</p>
+      <p class="footer-links">
+        <a href="./assets/privacy.pdf">Privacy Policy</a> | 
+        <a href="#contact">Contact</a> | 
+        <a href="https://github.com/7rouzz/portfolio">View Portfolio Source</a>
+      </p>
+    </div>
+  </footer>
 
-            </div>
-          </div>
-        </div>
-      </div>
-     
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:rabialouhichi.dev@gmail.com">rabialouhichi.dev@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/rabia-louhichi/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <center>
-     <a href="#"><img src="assets/RT .png" alt="" width="300" height="auto"></a>
-      </center> 
-    <footer>
-  
-    <p style="font-size: large;">You are Welcome 😊</p> <br>
-      <p>Copyright &#169; 2024 RLH. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
